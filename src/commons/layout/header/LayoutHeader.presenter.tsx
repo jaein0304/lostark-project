@@ -15,7 +15,7 @@ export default function LayoutHeaderUI(props: ILayoutHeaderProps) {
       </Link>
 
       <S.ContentsWrapper>
-        <Link href="/classes">
+        <Link href="/classes/selectClass">
           <a>
             <S.HeaderName>CLASSES</S.HeaderName>
           </a>

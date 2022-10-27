@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { breakPoints } from "./media";
 
 export const globalStyles = css`
   * {
@@ -14,6 +15,15 @@ export const globalStyles = css`
     font-family: "Noto Sans KR", sans-serif;
   }
 
+  header,
+  body {
+    padding: 0 40px;
+    background-color: black;
+    @media ${breakPoints.small} {
+      padding: 0 15px;
+      align-items: center;
+    }
+  }
   // 영어만 적용 가능
   @font-face {
     font-family: "myFont";

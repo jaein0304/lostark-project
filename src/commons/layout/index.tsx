@@ -4,12 +4,20 @@ import { ReactNode } from "react";
 import LayoutHeader from "./header/LayoutHeader.container";
 import LayoutNav from "./navigation/LayoutNav.container";
 
-const Body = styled.div`
-  height: 100px;
+const BodyWrapper = styled.main`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: black;
+  min-height: 70vh;
 `;
+
+const Body = styled.div`
+  width: 100%;
+  /* @media (min-width: 1080px) {
+    max-width: 1360px;
+  } */
+`;
+
 interface ILayoutProps {
   children: ReactNode;
 }
@@ -21,7 +29,9 @@ export default function Layout(props: ILayoutProps) {
   return (
     <>
       <LayoutHeader />
-      <Body>{props.children}</Body>
+      <BodyWrapper>
+        <Body>{props.children}</Body>
+      </BodyWrapper>
       <LayoutNav />
     </>
   );

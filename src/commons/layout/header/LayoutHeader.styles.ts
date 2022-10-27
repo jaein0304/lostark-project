@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100vw;
   height: 60px;
   background-color: black;
 `;
@@ -13,6 +12,7 @@ export const Wrapper = styled.div`
 export const LostLogo = styled.img`
   width: 192px;
   height: 46px;
+  padding-right: 1rem;
   @media ${breakPoints.small} {
     width: 43px;
   }
@@ -23,11 +23,7 @@ export const LogoWrapper = styled.a`
   justify-content: center;
   align-items: center;
   flex: 0 0 auto;
-  padding: 0 2rem;
   cursor: pointer;
-  @media ${breakPoints.small} {
-    padding: 0 1rem;
-  }
 `;
 
 export const ContentsWrapper = styled.div`
@@ -37,7 +33,7 @@ export const ContentsWrapper = styled.div`
 `;
 
 export const HeaderName = styled.header`
-  margin: 0.8rem;
+  padding: 1rem;
   color: white;
   :hover {
     font-family: "headerBoldFont";
