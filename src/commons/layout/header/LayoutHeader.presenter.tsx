@@ -1,38 +1,49 @@
 import Link from "next/link";
-import { HeaderName, LogoWrapper, LostLogo, Wrapper } from "./LayoutHeader.styles";
+import * as S from "./LayoutHeader.styles";
 import { ILayoutHeaderProps } from "./LayoutHeader.types";
 export default function LayoutHeaderUI(props: ILayoutHeaderProps) {
   return (
-    <Wrapper>
+    <S.Wrapper>
       <Link href="/">
-        <LogoWrapper>
-          <LostLogo src="https://d3irh93dd5ckql.cloudfront.net/statics/2022-10-18/images/LostArkLogo.png"></LostLogo>
-        </LogoWrapper>
+        <S.LogoWrapper>
+          {props.windowSize ? (
+            <S.LostLogo src="https://i.esdrop.com/d/f/eJqYA2AGQd/8ww0s2GoOr.png"></S.LostLogo>
+          ) : (
+            <S.LostLogo src="https://i.esdrop.com/d/f/eJqYA2AGQd/jVEs7fkkxy.png"></S.LostLogo>
+          )}
+        </S.LogoWrapper>
       </Link>
 
-      <Link href="/classes">
-        <a>
-          <HeaderName>CLASSES</HeaderName>
-        </a>
-      </Link>
+      <S.ContentsWrapper>
+        <Link href="/classes">
+          <a>
+            <S.HeaderName>CLASSES</S.HeaderName>
+          </a>
+        </Link>
 
-      <Link href="/product">
-        <a>
-          <HeaderName>PRODUCT</HeaderName>
-        </a>
-      </Link>
+        <Link href="/product">
+          <a>
+            <S.HeaderName>PRODUCT</S.HeaderName>
+          </a>
+        </Link>
 
-      <Link href="/community">
-        <a>
-          <HeaderName>COMMUNITY</HeaderName>
-        </a>
-      </Link>
+        <Link href="/community">
+          <a>
+            <S.HeaderName>COMMUNITY</S.HeaderName>
+          </a>
+        </Link>
 
-      <Link href="/classes">
+        <Link href="/classes">
+          <a>
+            <S.HeaderName>TACTICS</S.HeaderName>
+          </a>
+        </Link>
+      </S.ContentsWrapper>
+      <Link href="https://lostark.game.onstove.com/Main">
         <a>
-          <HeaderName>TACTICS</HeaderName>
+          <S.GameStart>GAME START</S.GameStart>
         </a>
       </Link>
-    </Wrapper>
+    </S.Wrapper>
   );
 }

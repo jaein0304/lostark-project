@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import LayoutHeader from "./header/LayoutHeader.container";
+import LayoutNav from "./navigation/LayoutNav.container";
 
 const Body = styled.div`
   height: 100px;
@@ -21,6 +22,7 @@ export default function Layout(props: ILayoutProps) {
     <>
       <LayoutHeader />
       <Body>{props.children}</Body>
+      <LayoutNav />
     </>
   );
 }

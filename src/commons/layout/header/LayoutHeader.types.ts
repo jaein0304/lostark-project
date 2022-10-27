@@ -1,3 +1,3 @@
 export interface ILayoutHeaderProps {
-  onClickLogo: () => void;
+  windowSize: boolean;
 }
