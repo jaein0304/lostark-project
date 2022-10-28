@@ -40,4 +40,9 @@ export const globalStyles = css`
     font-family: "headerBoldFont";
     src: url("/fonts/HeirofLightOTFBold.otf");
   }
+
+  @font-face {
+    font-family: "proximaNova";
+    src: url("/fonts/Proxima Nova Font.otf");
+  }
 `;

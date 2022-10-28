@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     display: none;
   }
   width: 100vw;
-  height: 4rem;
+  height: 4.5rem;
   box-shadow: 0px 0px 3px 0px #999;
   display: flex;
   flex-direction: row;
@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
+  background-color: white;
 `;
 
 export const Menu = styled.div`

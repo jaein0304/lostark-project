@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
+import LayoutFooter from "./footer";
 import LayoutHeader from "./header/LayoutHeader.container";
 import LayoutNav from "./navigation/LayoutNav.container";
 
@@ -8,7 +9,7 @@ const BodyWrapper = styled.main`
   display: flex;
   flex-direction: column;
   background-color: black;
-  min-height: 70vh;
+  /* min-height: 50vh; */
 `;
 
 const Body = styled.div`
@@ -25,13 +26,13 @@ interface ILayoutProps {
 export default function Layout(props: ILayoutProps) {
   const router = useRouter();
   console.log(router);
-
   return (
     <>
       <LayoutHeader />
       <BodyWrapper>
         <Body>{props.children}</Body>
       </BodyWrapper>
+      <LayoutFooter />
       <LayoutNav />
     </>
   );

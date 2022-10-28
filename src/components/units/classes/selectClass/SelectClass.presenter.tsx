@@ -15,44 +15,44 @@ export default function SelectClassUI() {
       </S.ClassDetailWrapper>
 
       <Link href="/classes/classDetail/fighter">
-        <S.SelectClass>
+        <S.SelectFighter>
           <S.FighterClass />
-        </S.SelectClass>
+        </S.SelectFighter>
       </Link>
-      <S.ClassDetailWrapper>
+      <S.FighterDetailWrapper>
         <S.ClassIcon src="/img/classIcon/ClassIcon_Fighter.svg" />
         <S.ClassName>FIGHTER</S.ClassName>
-      </S.ClassDetailWrapper>
+      </S.FighterDetailWrapper>
 
       <Link href="/classes/classDetail/mage">
-        <S.SelectClass>
+        <S.SelectMage>
           <S.MageClass />
-        </S.SelectClass>
+        </S.SelectMage>
       </Link>
-      <S.ClassDetailWrapper>
+      <S.MageDetailWrapper>
         <S.ClassIcon src="/img/classIcon/ClassIcon_Mage.svg" />
         <S.ClassName>MAGE</S.ClassName>
-      </S.ClassDetailWrapper>
+      </S.MageDetailWrapper>
 
       <Link href="/classes/classDetail/gunner">
-        <S.SelectClass>
+        <S.SelectGunner>
           <S.GunnerClass />
-        </S.SelectClass>
+        </S.SelectGunner>
       </Link>
-      <S.ClassDetailWrapper>
+      <S.GunnerDetailWrapper>
         <S.ClassIcon src="/img/classIcon/ClassIcon_Gunner.svg" />
         <S.ClassName>GUNNER</S.ClassName>
-      </S.ClassDetailWrapper>
+      </S.GunnerDetailWrapper>
 
       <Link href="/classes/classDetail/assassin">
-        <S.SelectClass>
+        <S.SelectAssassin>
           <S.AssassinClass />
-        </S.SelectClass>
+        </S.SelectAssassin>
       </Link>
-      <S.ClassDetailWrapper>
+      <S.AssassinDetailWrapper>
         <S.ClassIcon src="/img/classIcon/ClassIcon_Assassin.svg" />
         <S.ClassName>ASSASSIN</S.ClassName>
-      </S.ClassDetailWrapper>
+      </S.AssassinDetailWrapper>
     </S.Wrapper>
   );
 }
