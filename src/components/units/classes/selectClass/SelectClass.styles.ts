@@ -130,6 +130,7 @@ export const ClassDetailWrapper = styled.div`
   justify-content: center;
   align-items: center;
   grid-row-start: 2;
+  padding-top: 1rem;
   @media ${breakPoints.small} {
     grid-row-start: 1;
     grid-column-start: 1;

@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   background-color: white;

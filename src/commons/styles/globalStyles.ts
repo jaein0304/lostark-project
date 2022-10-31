@@ -45,4 +45,9 @@ export const globalStyles = css`
     font-family: "proximaNova";
     src: url("/fonts/Proxima Nova Font.otf");
   }
+
+  @font-face {
+    font-family: "vendomeFont";
+    src: url("/fonts/Vendome Regular.ttf");
+  }
 `;
