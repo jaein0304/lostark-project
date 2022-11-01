@@ -9,19 +9,20 @@ export const globalStyles = css`
 
   header {
     font-family: "headerFont";
+    background-color: black;
   }
 
   body {
     font-family: "Noto Sans KR", sans-serif;
+    /* background-color: black; */
   }
 
   header,
   body {
-    padding: 0 40px;
-    background-color: black;
+    /*
     @media ${breakPoints.small} {
       padding: 0 0px;
-    }
+    } */
   }
   // 영어만 적용 가능
   @font-face {

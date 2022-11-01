@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   color: #b5b5b5;
-  /* background-color: #141312; */
+  background-color: black;
   padding: 50px 10px;
   font-family: "proximaNova";
   @media ${breakPoints.small} {

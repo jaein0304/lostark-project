@@ -23,25 +23,11 @@ export const Character = styled.div`
   height: 100%;
   height: 800px;
   background-image: url("https://i.esdrop.com/d/f/eJqYA2AGQd/RbyxL49d0s.jpg");
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 45px,
-    black calc(100% - 75px),
-    transparent
-  );
   background-image: no-repeat;
   background-position: center;
   background-size: cover;
   @media ${breakPoints.mobile} {
     background-position-x: 70%;
-    mask-image: linear-gradient(
-      to right,
-      transparent,
-      black 30px,
-      black calc(100% - 30px),
-      transparent
-    );
   }
 `;
 
@@ -58,7 +44,6 @@ export const Gunner = styled(Character)`
 `;
 
 export const Assassin = styled(Character)`
-  opacity: 0.9;
   background-image: url("https://i.esdrop.com/d/f/eJqYA2AGQd/MSolLvyaYZ.jpg");
 `;
 export const CharWrapper = styled.div`
