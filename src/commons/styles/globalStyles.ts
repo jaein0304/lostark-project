@@ -20,8 +20,7 @@ export const globalStyles = css`
     padding: 0 40px;
     background-color: black;
     @media ${breakPoints.small} {
-      padding: 0 15px;
-      align-items: center;
+      padding: 0 0px;
     }
   }
   // 영어만 적용 가능

@@ -12,9 +12,11 @@ export const Wrapper = styled.div`
 export const LostLogo = styled.img`
   width: 192px;
   height: 46px;
-  padding-right: 1rem;
+  margin-right: 1rem;
   @media ${breakPoints.small} {
     width: 43px;
+    height: auto;
+    margin: 0 0.5rem;
   }
 `;
 
@@ -52,5 +54,6 @@ export const GameStart = styled(HeaderName)`
     display: block;
     width: 60px;
     padding: 0;
+    margin-right: 0.5rem;
   }
 `;

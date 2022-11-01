@@ -1,12 +1,22 @@
+import useWindowSizeStyle from "../../../../../commons/hooks/useWindowSizeStyle";
 import * as S from "../../../../commons/classes/background";
 
 export default function Warrior() {
+  useWindowSizeStyle();
+
   return (
     <S.Wrapper>
       <S.Character>
         <S.CharWrapper>
           <S.CharIcon src="/img/classDetail/Warlord.svg" />
           <S.Name>WARLORD</S.Name>
+          <S.UnderImg src="https://i.esdrop.com/d/f/eJqYA2AGQd/FWml1tJktK.png" />
+          {useWindowSizeStyle().windowSize ? (
+            <S.Class>WARRIOR</S.Class>
+          ) : (
+            <S.Class>"다시는 동료를 잃지 않겠다."</S.Class>
+          )}
+          <S.UnderLine />
           <S.CharDetail>
             워로드는 높은 방어력과 생존력을 기반으로 전장의 선봉에서 아군을 지휘하고 보호하는 근접
             클래스입니다. 거대한 방패를 이용한 다양한 방어기술은 강력한 적들의 공격을 피해 없이
@@ -17,12 +27,12 @@ export default function Warrior() {
         </S.CharWrapper>
       </S.Character>
       <S.VideoWrapper>
-        <S.Name>WARLORD ATTACKS</S.Name>
+        <S.Name>warlord attacks</S.Name>
         <br />
         <S.Video
           url={"https://www.youtube.com/watch?v=zMHewpt6DuM"}
           width="100%"
-          height="800px"
+          height="100%"
           playing={true}
           muted={true}
           controls={true}
