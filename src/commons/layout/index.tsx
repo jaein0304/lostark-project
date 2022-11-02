@@ -18,7 +18,7 @@ const BLACK_BODY = [
 const BodyWrapper = styled.main`
   display: flex;
   flex-direction: column;
-  background-color: black;
+  /* background-color: black; */
   align-items: center;
   /* min-height: 50vh; */
 `;
