@@ -1,5 +1,6 @@
 import * as S from "./BoardList.styles";
 import { BiSearchAlt2 } from "react-icons/bi";
+import BlackButton from "../../../commons/buttons/BlackButton";
 
 export default function BoardListUI() {
   return (
@@ -20,7 +21,7 @@ export default function BoardListUI() {
           </S.BestBoard>
         </S.RowWrapper>
       </S.BestBoardWrapper>
-      <S.WriteButton>글쓰기</S.WriteButton>
+      <BlackButton title="글쓰기" type={"button"} />
       <S.SearchWrapper>
         <S.Search type="text" placeholder="찾으실 제목을 입력해주세요." />
         <S.SearchButton>

@@ -120,16 +120,3 @@ export const BodyTitle = styled.button`
 export const TableBottom = styled.div`
   border-bottom: 2px solid gray;
 `;
-
-export const WriteButton = styled.button`
-  width: 130px;
-  height: 40px;
-  margin: 10px 0;
-  border: none;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: #2b2b2b;
-  color: white;
-  text-shadow: black 0 0 6px;
-  border-radius: 5px;
-`;
