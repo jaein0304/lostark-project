@@ -44,7 +44,7 @@ export const ButtonWrapper = styled.div`
   justify-content: center;
   width: 100%;
   padding: 1rem;
-  margin-bottom: 70px;
+  margin: 30px 0px 70px 0px;
 `;
 
 export const Margin = styled.div`

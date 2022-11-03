@@ -10,7 +10,7 @@ export const Button = styled.button`
   background-color: #2b2b2b;
   color: white;
   text-shadow: black 0 0 6px;
-  border-radius: 5px;
+  margin-right: 10px;
 `;
 
 interface IButtonProps {
