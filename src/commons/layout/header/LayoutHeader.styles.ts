@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 export const LostLogo = styled.img`
   width: 192px;
   height: 46px;
-  margin-right: 1rem;
+  margin: 0 1rem 0 1rem;
   @media ${breakPoints.small} {
     width: 43px;
     height: auto;
