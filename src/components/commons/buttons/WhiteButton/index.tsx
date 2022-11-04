@@ -9,6 +9,7 @@ export const Button = styled.button`
   font-weight: 500;
   background-color: #ffffff;
   color: black;
+  cursor: pointer;
 `;
 
 interface IButtonProps {
