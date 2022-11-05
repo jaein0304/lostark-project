@@ -1,10 +1,15 @@
 import styled from "@emotion/styled";
+import { breakPoints } from "../../../../commons/styles/media";
 
 export const Wrapper = styled.div`
   max-width: 1400px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  @media ${breakPoints.small} {
+    margin-bottom: 100px;
+    font-size: 12px;
+  }
 `;
 
 export const CarouselWrapper = styled.div`
@@ -88,6 +93,9 @@ export const MainHead = styled.div`
 
 export const MainNumber = styled.div`
   width: 5%;
+  @media ${breakPoints.small} {
+    width: 10%;
+  }
 `;
 export const MainTitle = styled.div`
   width: 65%;
@@ -97,6 +105,9 @@ export const MainWriter = styled.div`
 `;
 export const MainDate = styled.div`
   width: 15%;
+  @media ${breakPoints.small} {
+    width: 20%;
+  }
 `;
 
 export const MainBody = styled(MainHead)`
@@ -105,18 +116,30 @@ export const MainBody = styled(MainHead)`
 `;
 
 export const BodyTitle = styled.button`
+  font-size: 16px;
+  display: flex;
+  padding-left: 10rem;
   width: 65%;
-  text-align: center;
   cursor: pointer;
   background-color: white;
   border: none;
+  text-align: left;
+  word-break: break-all;
 
   :hover {
     text-decoration: underline;
     text-underline-position: under;
   }
+  @media ${breakPoints.tablet} {
+    padding-left: 5rem;
+  }
+  @media ${breakPoints.mobile} {
+    padding-left: 1rem;
+    font-size: 12px;
+  }
 `;
 
 export const TableBottom = styled.div`
   border-bottom: 2px solid gray;
+  margin-top: 30px;
 `;

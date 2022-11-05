@@ -1,8 +1,12 @@
 import * as S from "./BoardList.styles";
 import { BiSearchAlt2 } from "react-icons/bi";
 import BlackButton from "../../../commons/buttons/BlackButton";
+import { IBoardListUIProps } from "./BoardList.types";
+import { getDate } from "../../../../commons/libraries/utils";
+import Pagination from "../../../commons/pagination/board/Pagination.container";
+import useWindowSizeStyle from "../../../../commons/hooks/useWindowSizeStyle";
 
-export default function BoardListUI() {
+export default function BoardListUI(props: IBoardListUIProps) {
   return (
     <S.Wrapper>
       <S.CarouselWrapper></S.CarouselWrapper>
@@ -21,7 +25,7 @@ export default function BoardListUI() {
           </S.BestBoard>
         </S.RowWrapper>
       </S.BestBoardWrapper>
-      <BlackButton title="글쓰기" type={"button"} />
+      <BlackButton title="글쓰기" type={"button"} onClick={props.onClickMoveToBoardNew} />
       <S.SearchWrapper>
         <S.Search type="text" placeholder="찾으실 제목을 입력해주세요." />
         <S.SearchButton>
@@ -40,16 +44,23 @@ export default function BoardListUI() {
         <S.MainWriter>작성자</S.MainWriter>
         <S.MainDate>날짜</S.MainDate>
       </S.MainHead>
+      {props.data?.fetchBoards.map((el) => (
+        <S.MainBody key={el._id}>
+          <S.MainNumber>{String(el._id).slice(-4).toUpperCase()}</S.MainNumber>
+          <S.BodyTitle id={el._id} onClick={props.onClickMoveToBoardDetail}>
+            {useWindowSizeStyle().windowSize ? (
+              <>{String(el.title).slice(0, 15)}</>
+            ) : (
+              <>{String(el.title).slice(0, 105)}</>
+            )}
+          </S.BodyTitle>
+          <S.MainWriter>{el.writer}</S.MainWriter>
+          <S.MainDate>{getDate(el.createdAt)}</S.MainDate>
+        </S.MainBody>
+      ))}
 
-      {/* map */}
-      <S.MainBody>
-        <S.MainNumber>aa</S.MainNumber>
-        <S.BodyTitle>aa</S.BodyTitle>
-        <S.MainWriter>aa</S.MainWriter>
-        <S.MainDate>aa</S.MainDate>
-      </S.MainBody>
       <S.TableBottom />
-      {/* pagination */}
+      <Pagination refetch={props.refetch} count={props.count} />
     </S.Wrapper>
   );
 }
