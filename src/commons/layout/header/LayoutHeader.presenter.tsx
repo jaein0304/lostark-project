@@ -27,7 +27,7 @@ export default function LayoutHeaderUI(props: ILayoutHeaderProps) {
           </a>
         </Link>
 
-        <Link href="/community">
+        <Link href="/boards/">
           <a>
             <S.HeaderName>COMMUNITY</S.HeaderName>
           </a>
