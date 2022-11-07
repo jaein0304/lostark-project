@@ -10,7 +10,12 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
     <S.Wrapper>
       <S.MainWrapper>
         <S.TitleWrapper>
-          <S.Title type="text" placeholder="제목을 입력해주세요." onChange={props.onChangeTitle} />
+          <S.Title
+            type="text"
+            placeholder="제목을 입력해주세요."
+            onChange={props.onChangeTitle}
+            defaultValue={props.data?.fetchBoard.title || ""}
+          />
           <S.Error>{props.titleError}</S.Error>
         </S.TitleWrapper>
         <S.Row>
@@ -19,6 +24,7 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
               type="text"
               placeholder="이름을 입력해주세요."
               onChange={props.onChangeWriter}
+              defaultValue={props.data?.fetchBoard.writer || ""}
             />
             <S.Error>{props.writerError}</S.Error>
           </S.Column>
@@ -32,7 +38,11 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
           </S.Column>
         </S.Row>
         <S.ContentsWrapper>
-          <S.Contents placeholder="내용을 입력해주세요." onChange={props.onChangeContents} />
+          <S.Contents
+            placeholder="내용을 입력해주세요."
+            onChange={props.onChangeContents}
+            defaultValue={props.data?.fetchBoard.contents || ""}
+          />
         </S.ContentsWrapper>
         <S.ContentsError>{props.contentsError}</S.ContentsError>
         <S.YoutubeWrapper>
@@ -40,6 +50,7 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
             type="text"
             placeholder="유튜브 링크를 넣어주세요."
             onChange={props.onChangeYoutubeUrl}
+            defaultValue={props.data?.fetchBoard.youtubeUrl || ""}
           />
         </S.YoutubeWrapper>
         <S.ImgTitle>[사진 첨부]</S.ImgTitle>
@@ -55,7 +66,11 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
         </S.ImageWrapper>
       </S.MainWrapper>
       <S.ButtonWrapper>
-        <Button title="확인" type={"button"} onClick={props.onClickSubmit}>
+        <Button
+          title={"확인"}
+          type={"button"}
+          onClick={props.isEdit ? props.onClickUpdate : props.onClickSubmit}
+        >
           확인
         </Button>
         <S.Margin />

@@ -1,9 +1,5 @@
 import styled from "@emotion/styled";
 import { breakPoints } from "../../../../commons/styles/media";
-import dynamic from "next/dynamic";
-import "react-quill/dist/quill.snow.css";
-
-const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 export const Wrapper = styled.div`
   display: flex;

@@ -1,11 +1,17 @@
 import BoardWriteUI from "./BoardWrite.presenter";
 import { ChangeEvent, useEffect, useState } from "react";
-import { IMutation, IMutationCreateBoardArgs } from "../../../../commons/types/generated/types";
+import {
+  IMutation,
+  IMutationCreateBoardArgs,
+  IMutationUpdateBoardArgs,
+  IUpdateBoardInput,
+} from "../../../../commons/types/generated/types";
 import { useMutation } from "@apollo/client";
-import { CREATE_BOARD } from "./BoardWrite.queries";
+import { CREATE_BOARD, UPDATE_BOARD } from "./BoardWrite.queries";
 import { useRouter } from "next/router";
+import { IBoardWriteProps } from "./BoardWrite.types";
 
-export default function BoardWrite() {
+export default function BoardWrite(props: IBoardWriteProps) {
   const router = useRouter();
   const [writer, setWriter] = useState("");
   const [password, setPassword] = useState("");
@@ -23,6 +29,9 @@ export default function BoardWrite() {
 
   const [createBoard] = useMutation<Pick<IMutation, "createBoard">, IMutationCreateBoardArgs>(
     CREATE_BOARD
+  );
+  const [updateBoard] = useMutation<Pick<IMutation, "updateBoard">, IMutationUpdateBoardArgs>(
+    UPDATE_BOARD
   );
 
   const onClickCancel = () => {
@@ -123,6 +132,42 @@ export default function BoardWrite() {
     }
   };
 
+  const onClickUpdate = async () => {
+    const currentFiles = JSON.stringify(fileUrls);
+    const defaultFiles = JSON.stringify(props.data?.fetchBoard.images);
+    const isChangedFiles = currentFiles !== defaultFiles;
+
+    if (!title && !contents && !youtubeUrl && !isChangedFiles) {
+      alert("수정한 내용이 없습니다.");
+      return;
+    }
+
+    if (!password) {
+      alert("비밀번호를 입력해주세요.");
+      return;
+    }
+
+    const updateBoardInput: IUpdateBoardInput = {};
+    if (title) updateBoardInput.title = title;
+    if (contents) updateBoardInput.contents = contents;
+    if (youtubeUrl) updateBoardInput.youtubeUrl = youtubeUrl;
+    if (isChangedFiles) updateBoardInput.images = fileUrls;
+
+    try {
+      if (typeof router.query.boardId !== "string") return;
+      const result = await updateBoard({
+        variables: {
+          boardId: router.query.boardId,
+          password,
+          updateBoardInput,
+        },
+      });
+      router.push(`/boards/${result.data?.updateBoard._id}`);
+    } catch (error) {
+      if (error instanceof Error) alert(error.message);
+    }
+  };
+
   return (
     <BoardWriteUI
       writerError={writerError}
@@ -137,8 +182,11 @@ export default function BoardWrite() {
       onClickCancel={onClickCancel}
       onChangeYoutubeUrl={onChangeYoutubeUrl}
       onChangeFileUrls={onChangeFileUrls}
+      onClickUpdate={onClickUpdate}
       buttonColor={buttonColor}
       fileUrls={fileUrls}
+      data={props.data}
+      isEdit={props.isEdit}
     />
   );
 }
