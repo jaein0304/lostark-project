@@ -3,6 +3,7 @@ import WhiteButton from "../../../commons/buttons/WhiteButton";
 import * as S from "./BoardWrite.styles";
 import { IBoardWriteUIProps } from "./BoardWrite.types";
 import { v4 as uuidv4 } from "uuid";
+import Uploads01 from "../../../commons/upload/Upload.container";
 
 export default function BoardWriteUI(props: IBoardWriteUIProps) {
   return (
@@ -43,14 +44,14 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
         </S.YoutubeWrapper>
         <S.ImgTitle>[사진 첨부]</S.ImgTitle>
         <S.ImageWrapper>
-          {/* {props.fileUrls.map((el, index) => (
+          {props.fileUrls.map((el, index) => (
             <Uploads01
               key={uuidv4()}
               index={index}
               fileUrl={el}
               onChangeFileUrls={props.onChangeFileUrls}
             />
-          ))} */}
+          ))}
         </S.ImageWrapper>
       </S.MainWrapper>
       <S.ButtonWrapper>

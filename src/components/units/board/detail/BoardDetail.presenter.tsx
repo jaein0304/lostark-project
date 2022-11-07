@@ -12,8 +12,11 @@ export default function BoardDetailUI(props: IBoardDetailUIProps) {
         <S.CreatedAt>{getDate(props.data?.fetchBoard?.createdAt)}</S.CreatedAt>
       </S.TitleWrapper>
       <S.ImgWrapper>
-        이미지들어갈자리
-        <S.Images />
+        {props.data?.fetchBoard.images
+          ?.filter((el: string) => el)
+          .map((el: string) => (
+            <S.Images key={el} src={`https://storage.googleapis.com/${el}`} />
+          ))}
       </S.ImgWrapper>
       <S.Contents>{props.data?.fetchBoard?.contents}</S.Contents>
       <S.LikeButtonWrapper>

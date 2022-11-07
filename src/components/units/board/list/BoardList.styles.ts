@@ -17,7 +17,7 @@ export const CarouselWrapper = styled.div`
   height: 300px;
   margin: 20px 0px;
   border-radius: 10px;
-  background-color: darkviolet;
+  background-color: none;
   background-image: url("https://www.notion.so/image/https%3A%2F%2Fcdn-lostark.game.onstove.com%2F2022%2Fevent%2F221026_update_kjBAs7Z3%2Fimages%2Fpc%2Fimg_swiper1_1.jpg%3F1f2d1624ea718349411ea14ede6965d3?table=block&id=f0d0a1c5-c3a9-4664-9f6e-5fe4b0d29a9c&spaceId=9a123e11-a840-4244-82d3-0a81c1d75cd1&width=2000&userId=dee01582-c4b2-4792-952a-17b4eb37394c&cache=v2");
 `;
 export const SearchWrapper = styled.div`
