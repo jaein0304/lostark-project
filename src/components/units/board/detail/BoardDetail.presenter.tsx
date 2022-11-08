@@ -38,7 +38,6 @@ export default function BoardDetailUI(props: IBoardDetailUIProps) {
           <BlackButton title="삭제" type={"button"} onClick={props.onClickBoardDelete} />
         </S.ButtonWrapper>
       </S.FlexEnd>
-      <hr />
     </S.Wrapper>
   );
 }
