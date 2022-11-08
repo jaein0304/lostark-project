@@ -10,6 +10,8 @@ import {
   IMutation,
   IMutationDeleteBoardCommentArgs,
 } from "../../../../commons/types/generated/types";
+import moment from "moment-timezone";
+import "moment/locale/ko";
 
 export default function BoardCommentListUIItem(props: IBoardCommentListUIItemProps) {
   const router = useRouter();
@@ -84,7 +86,10 @@ export default function BoardCommentListUIItem(props: IBoardCommentListUIItemPro
               />
             </S.OptionWrapper>
           </S.FlexWrapper>
-          <S.DateString>{props.el?.createdAt}</S.DateString>
+          <S.DateString>
+            {/* {props.el?.createdAt} */}
+            {moment(props.el?.createdAt).tz("Asia/Seoul").startOf("hour").fromNow()}
+          </S.DateString>
         </S.ItemWrapper>
       )}
       {isEdit && <BoardCommentWrite isEdit={true} setIsEdit={setIsEdit} el={props.el} />}
