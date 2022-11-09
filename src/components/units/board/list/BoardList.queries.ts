@@ -16,3 +16,13 @@ export const FETCH_BOARDS_COUNT = gql`
     fetchBoardsCount(search: $search)
   }
 `;
+
+export const FETCH_BOARDS_OF_THE_BEST = gql`
+  query fetchBoardsOfTheBest {
+    fetchBoardsOfTheBest {
+      writer
+      title
+      _id
+    }
+  }
+`;

@@ -20,15 +20,16 @@ export default function BoardDetailUI(props: IBoardDetailUIProps) {
       </S.ImgWrapper>
       <S.Contents>{props.data?.fetchBoard?.contents}</S.Contents>
       <S.LikeButtonWrapper>
-        <S.LikeButton>
+        <S.LikeButton onClick={props.onClickLike}>
           <FiHeart
+            className="FiHeart"
             style={{
               width: "23px",
               height: "23px",
               color: "#8809F6",
             }}
           />
-          <S.LikeCount>1</S.LikeCount>
+          <S.LikeCount> {props.data?.fetchBoard.likeCount}</S.LikeCount>
         </S.LikeButton>
       </S.LikeButtonWrapper>
       <S.FlexEnd>

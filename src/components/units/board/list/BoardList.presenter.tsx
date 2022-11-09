@@ -14,21 +14,22 @@ export default function BoardListUI(props: IBoardListUIProps) {
         인기게시판
         <S.RowWrapper>
           <S.BestBoard>
-            <S.BestBoardTitle>좋아요 많은 게시판 1번</S.BestBoardTitle>
-            <S.BestBoardTitle>좋아요 많은 게시판 2번</S.BestBoardTitle>
-            <S.BestBoardTitle>좋아요 많은 게시판 3번</S.BestBoardTitle>
-          </S.BestBoard>
-          <S.BestBoard>
-            <S.BestBoardTitle>좋아요 많은 게시판 4번 </S.BestBoardTitle>
-            <S.BestBoardTitle>좋아요 많은 게시판 5번</S.BestBoardTitle>
-            <S.BestBoardTitle>좋아요 많은 게시판 6번</S.BestBoardTitle>
+            {props.dataBoardsOfTheBest?.fetchBoardsOfTheBest.map((el) => (
+              <S.BestBoardButton key={el._id} id={el._id} onClick={props.onClickMoveToBoardDetail}>
+                {el.title.length > 40 ? el.title.slice(0, 115) + "..." : el.title}
+              </S.BestBoardButton>
+            ))}
           </S.BestBoard>
         </S.RowWrapper>
       </S.BestBoardWrapper>
       <BlackButton title="글쓰기" type={"button"} onClick={props.onClickMoveToBoardNew} />
       <S.SearchWrapper>
-        <S.Search type="text" placeholder="찾으실 제목을 입력해주세요." />
-        <S.SearchButton>
+        <S.Search
+          type="text"
+          placeholder="찾으실 제목을 입력해주세요."
+          onChange={props.onChangeSearch}
+        />
+        <S.SearchButton onClick={props.onClickSearch}>
           <BiSearchAlt2
             style={{
               width: "20px",
@@ -51,7 +52,7 @@ export default function BoardListUI(props: IBoardListUIProps) {
             {useWindowSizeStyle().windowSize ? (
               <>{String(el.title).slice(0, 15)}</>
             ) : (
-              <>{String(el.title).slice(0, 105)}</>
+              <>{el.title.length > 40 ? el.title.slice(0, 105) + "..." : el.title}</>
             )}
           </S.BodyTitle>
           <S.MainWriter>{el.writer}</S.MainWriter>

@@ -34,11 +34,14 @@ export const Search = styled.input`
   height: 30px;
 `;
 
-export const SearchButton = styled.div`
+export const SearchButton = styled.button`
   width: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 `;
 
 export const BestBoardWrapper = styled.div`
@@ -63,7 +66,6 @@ export const RowWrapper = styled.div`
 export const BestBoard = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
   height: 20px;
 `;
 
@@ -142,4 +144,18 @@ export const BodyTitle = styled.button`
 export const TableBottom = styled.div`
   border-bottom: 2px solid gray;
   margin-top: 30px;
+`;
+
+export const BestBoardButton = styled.button`
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  :hover {
+    text-decoration: underline;
+    text-underline-position: under;
+  }
 `;

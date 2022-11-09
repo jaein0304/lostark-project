@@ -74,6 +74,7 @@ export const LikeButton = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const LikeCount = styled.span`
