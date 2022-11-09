@@ -1,6 +1,7 @@
 import Link from "next/link";
 import * as S from "./LayoutHeader.styles";
 import { ILayoutHeaderProps } from "./LayoutHeader.types";
+import { AiOutlineUser } from "react-icons/ai";
 export default function LayoutHeaderUI(props: ILayoutHeaderProps) {
   return (
     <S.Wrapper>
@@ -39,9 +40,34 @@ export default function LayoutHeaderUI(props: ILayoutHeaderProps) {
           </a>
         </Link>
       </S.ContentsWrapper>
+      {props.accessToken ? (
+        <Link href="/myPage">
+          <div
+            style={{
+              lineHeight: "10px",
+            }}
+          >
+            <a style={{ color: "white", padding: "10px" }}>
+              <AiOutlineUser size="24" />
+              {/* <S.HeaderName>LOGIN</S.HeaderName> */}
+            </a>
+          </div>
+        </Link>
+      ) : (
+        <Link href="/login">
+          <a>
+            <S.HeaderName>LOGIN</S.HeaderName>
+          </a>
+        </Link>
+      )}
+      {/* <Link href="/login">
+        <a>
+          <S.HeaderName>LOGIN</S.HeaderName>
+        </a>
+      </Link> */}
       <Link href="https://lostark.game.onstove.com/Main">
         <a>
-          <S.GameStart>GAME START</S.GameStart>
+          <S.HeaderName>GAME START</S.HeaderName>
         </a>
       </Link>
     </S.Wrapper>
