@@ -7,7 +7,6 @@ export default function BoardCommentWriteUI(props: IBoardCommentWriteUIProps) {
     <S.Wrapper>
       {!props.isEdit && (
         <S.CommentTitle>
-          <BiCommentDetail />
           <span>댓글</span>
         </S.CommentTitle>
       )}
