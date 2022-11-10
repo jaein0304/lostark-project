@@ -15,6 +15,8 @@ const BLACK_BODY = [
   "/classes/classDetail/assassin",
 ];
 
+const NO_MAX_WIDTH = ["/myPage"];
+
 const BodyWrapper = styled.main`
   display: flex;
   flex-direction: column;
@@ -34,6 +36,11 @@ const WhiteBody = styled(Body)`
   background-color: white;
 `;
 
+const NoMaxWidth = styled.div`
+  width: 100vw;
+  background-color: transparent;
+`;
+
 interface ILayoutProps {
   children: ReactNode;
 }
@@ -41,6 +48,7 @@ interface ILayoutProps {
 export default function Layout(props: ILayoutProps) {
   const router = useRouter();
   const isHiddenBlackBody = BLACK_BODY.includes(router.asPath);
+  const isVisible = NO_MAX_WIDTH.includes(router.asPath);
   console.log(router);
   return (
     <>
@@ -50,7 +58,14 @@ export default function Layout(props: ILayoutProps) {
         {isHiddenBlackBody ? (
           <Body>{props.children}</Body>
         ) : (
-          <WhiteBody>{props.children}</WhiteBody>
+          <>
+            {/* nowaxwidth면 whitebody가 아니라 nomaxwidth */}
+            {isVisible ? (
+              <NoMaxWidth>{props.children}</NoMaxWidth>
+            ) : (
+              <WhiteBody>{props.children}</WhiteBody>
+            )}
+          </>
         )}
       </BodyWrapper>
       <LayoutFooter />
