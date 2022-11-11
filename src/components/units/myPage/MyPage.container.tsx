@@ -7,9 +7,11 @@ export default function MyPage() {
   // 찜목록
 
   const { data: myPickData } = useQuery<
-    Pick<IQuery, "fetchUseditemsCountIPicked">,
+    Pick<IQuery, "fetchUseditemsIPicked">,
     IQueryFetchUseditemsIPickedArgs
-  >(FETCH_USED_ITEMS_I_PICKED);
+  >(FETCH_USED_ITEMS_I_PICKED, {
+    variables: { search: "", page: 1 },
+  });
 
-  return <MyPageUI />;
+  return <MyPageUI myPickData={myPickData} />;
 }

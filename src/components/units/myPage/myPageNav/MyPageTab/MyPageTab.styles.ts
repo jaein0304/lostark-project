@@ -24,6 +24,7 @@ export const Current = styled.button`
   width: 100%;
   height: 100%;
   font-size: 1.5em;
+  cursor: pointer;
   border: none;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
