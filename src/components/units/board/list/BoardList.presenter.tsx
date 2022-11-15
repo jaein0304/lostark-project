@@ -5,11 +5,14 @@ import { IBoardListUIProps } from "./BoardList.types";
 import { getDate } from "../../../../commons/libraries/utils";
 import Pagination from "../../../commons/pagination/board/Pagination.container";
 import useWindowSizeStyle from "../../../../commons/hooks/useWindowSizeStyle";
+import Carousel from "../../../../commons/libraries/carousel";
 
 export default function BoardListUI(props: IBoardListUIProps) {
   return (
     <S.Wrapper>
-      <S.CarouselWrapper></S.CarouselWrapper>
+      <S.CarouselWrapper>
+        <Carousel />
+      </S.CarouselWrapper>
       <S.BestBoardWrapper>
         인기게시판
         <S.RowWrapper>
