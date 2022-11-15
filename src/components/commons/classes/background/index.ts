@@ -72,6 +72,7 @@ export const Name = styled.h1`
   text-transform: uppercase;
   text-align: center;
   text-shadow: black 0px 0px 4px;
+  color: white;
   @media ${breakPoints.mobile} {
     font-weight: 400;
     margin: 0px;
