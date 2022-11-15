@@ -21,24 +21,22 @@ export default function LayoutHeaderUI(props: ILayoutHeaderProps) {
             <S.HeaderName>CLASSES</S.HeaderName>
           </a>
         </Link>
-
+        <Link href="/boards/">
+          <a>
+            <S.HeaderName>COMMUNITY</S.HeaderName>
+          </a>
+        </Link>
         <Link href="/product">
           <a>
             <S.HeaderName>PRODUCT</S.HeaderName>
           </a>
         </Link>
 
-        <Link href="/boards/">
-          <a>
-            <S.HeaderName>COMMUNITY</S.HeaderName>
-          </a>
-        </Link>
-
-        <Link href="/classes">
+        {/* <Link href="/classes">
           <a>
             <S.HeaderName>TACTICS</S.HeaderName>
           </a>
-        </Link>
+        </Link> */}
       </S.ContentsWrapper>
       {props.accessToken ? (
         <Link href="/myPage">
@@ -49,7 +47,6 @@ export default function LayoutHeaderUI(props: ILayoutHeaderProps) {
           >
             <a style={{ color: "white", padding: "10px" }}>
               <AiOutlineUser size="24" />
-              {/* <S.HeaderName>LOGIN</S.HeaderName> */}
             </a>
           </div>
         </Link>
