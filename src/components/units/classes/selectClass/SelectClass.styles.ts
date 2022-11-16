@@ -43,7 +43,7 @@ export const SelectClass = styled.a`
     text-decoration: none;
     position: relative;
     overflow: hidden;
-    /* height: 160px; */
+    /* height: 50px; */
     grid-row-start: 1;
     border-width: 1px;
     border-style: solid;

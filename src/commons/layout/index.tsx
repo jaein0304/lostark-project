@@ -7,12 +7,12 @@ import LayoutNav from "./navigation/LayoutNav.container";
 
 const BLACK_BODY = [
   "/classes/",
-  "/classes/selectClass",
-  "/classes/classDetail/warrior",
-  "/classes/classDetail/fighter",
-  "/classes/classDetail/mage",
-  "/classes/classDetail/gunner",
-  "/classes/classDetail/assassin",
+  "/classes/selectClass/",
+  "/classes/classDetail/warrior/",
+  "/classes/classDetail/fighter/",
+  "/classes/classDetail/mage/",
+  "/classes/classDetail/gunner/",
+  "/classes/classDetail/assassin/",
 ];
 
 const NO_MAX_WIDTH = ["/myPage"];

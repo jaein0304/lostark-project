@@ -105,6 +105,7 @@ export const Class = styled.h4`
   font-weight: 400;
   text-shadow: black 0 0 6px;
   line-height: 1.5;
+  color: white;
 `;
 
 export const UnderLine = styled.hr`

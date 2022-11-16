@@ -1,6 +1,6 @@
 import { ApolloQueryResult } from "@apollo/client";
 import { MouseEvent } from "react";
-import { IQuery, IQueryFetchBoardsArgs } from "../../../commons/types/generated/types";
+import { IQuery, IQueryFetchBoardsArgs } from "../../../../commons/types/generated/types";
 
 export interface IPagination01Props {
   count?: number;

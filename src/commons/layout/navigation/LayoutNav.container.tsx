@@ -7,7 +7,7 @@ export default function Navigation() {
   const bottomMenus = [
     { name: "CLASSES", page: "/classes" },
     { name: "PRODUCT", page: "/product" },
-    { name: "COMMUNITY", page: "/community" },
+    { name: "COMMUNITY", page: "/boards" },
     { name: "TACTICS", page: "/tactics" },
   ];
   const menuIcons = [

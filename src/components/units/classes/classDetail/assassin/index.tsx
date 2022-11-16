@@ -29,7 +29,7 @@ export default function Assassin() {
         <S.Name>blade attacks</S.Name>
         <br />
         <S.Video
-          url={"https://www.youtube.com/watch?v=zMHewpt6DuM"}
+          url={"https://www.youtube.com/watch?v=AnAMIuh6wqo"}
           width="100%"
           height="100%"
           playing={true}

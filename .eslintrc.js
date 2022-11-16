@@ -5,7 +5,11 @@ module.exports = {
   },
   extends: ["plugin:react/recommended", "standard-with-typescript", "prettier"],
   overrides: [],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
     ecmaVersion: "latest",
     sourceType: "module",
   },
