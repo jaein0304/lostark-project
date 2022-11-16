@@ -14,19 +14,15 @@
 
 ## 클래스 선택
 
-<hr/>
-
 [http://localhost:3000/classes/selectClass/](http://localhost:3000/classes/selectClass/)
 
 ![Untitled](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd01989a4-5051-4946-9117-afb4f6b9358b%2FUntitled.png?table=block&id=82834ef3-ba2f-447a-aca8-93098d78b971&spaceId=83f45596-d92c-46e2-b170-00c441d94d81&width=2000&userId=dee01582-c4b2-4792-952a-17b4eb37394c&cache=v2)
 
-- ### grid를 이용한 클래스 나열 및 반응형
+- grid를 이용한 클래스 나열 및 반응형
 
 <br/><br/>
 
 ## 클래스 상세
-
-<hr/>
 
 [http://localhost:3000/classes/classDetail/assassin/](http://localhost:3000/classes/classDetail/assassin/)
 
@@ -36,21 +32,17 @@
 
 ## 커뮤니티 목록
 
-<hr/>
-
 [http://localhost:3000/boards/](http://localhost:3000/boards/)
 
-- ### 페이지네이션으로 목록 보여주기
-- ### useRef, useEffect를 이용한 자동이동 캐러셀 구현
-- ### 검색 기능
+- 페이지네이션으로 목록 보여주기
+- useRef, useEffect를 이용한 자동이동 캐러셀 구현
+- 검색 기능
 
 ![ezgif.com-gif-maker (2).gif](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1002d0c1-a68a-45ab-9f1a-095cbab06853/ezgif.com-gif-maker_%282%29.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221116%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221116T090019Z&X-Amz-Expires=86400&X-Amz-Signature=7e87c3866160e8cae4455207d302791f2cf933e9a7af45faad3d7d46f05ece1b&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <br/><br/>
 
 ## 커뮤니티 생성
-
-<hr/>
 
 [http://localhost:3000/boards/new/](http://localhost:3000/boards/new/)
 
@@ -60,11 +52,9 @@
 
 ## 커뮤니티 상세
 
-<hr/>
-
 [http://localhost:3000/boards/](http://localhost:3000/boards/636df31c1a9e0f002973b93e/)[boardId]
 
-- ### 좋아요 기능
+- 좋아요 기능
 
 ![Untitled](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F64b25279-3847-4bbd-9888-61ee6d2e7f10%2FUntitled.png?table=block&id=2230ac56-94a0-4d87-b806-da4a116f14df&spaceId=83f45596-d92c-46e2-b170-00c441d94d81&width=2000&userId=dee01582-c4b2-4792-952a-17b4eb37394c&cache=v2)
 
@@ -72,9 +62,7 @@
 
 ## 댓글
 
-<hr/>
-
-- ### 댓글 CRUD
+- 댓글 CRUD
   ![Untitled](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F56bbd3b0-c3b9-48c3-8615-adfa1d7762b9%2FUntitled.png?table=block&id=47f4aee5-817d-4e81-869f-aea18f2b95ff&spaceId=83f45596-d92c-46e2-b170-00c441d94d81&width=2000&userId=dee01582-c4b2-4792-952a-17b4eb37394c&cache=v2)
 
 ![Untitled](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F355e0653-766f-491c-bcc9-758a69aec0d3%2FUntitled.png?table=block&id=92268ea5-85d8-4609-b6be-1a396928a4a9&spaceId=83f45596-d92c-46e2-b170-00c441d94d81&width=2000&userId=dee01582-c4b2-4792-952a-17b4eb37394c&cache=v2)
